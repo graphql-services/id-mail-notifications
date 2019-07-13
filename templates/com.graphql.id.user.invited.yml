@@ -1,8 +1,10 @@
 to: '{{.user.email}}'
 subject: You have been invited to {{env "PROJECT_NAME"}}
 text: >
-  We are happy to have You on board.
+  Welcome!
+
+  You have been invited to {{env "PROJECT_NAME"}}!
+
   To finish the invitation process, please visit {{env "PROJECT_HOSTNAME"}}/confirm-invitation/{{.requestID}}
-html: >
-  We are happy to have You on board. <br />
-  To finish the invitation process, please visit <a href="{{env "PROJECT_HOSTNAME"}}/confirm-invitation/{{.requestID}}">{{env "PROJECT_HOSTNAME"}}</a>
+html:
+  file: invited.html
